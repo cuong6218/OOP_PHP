@@ -26,12 +26,12 @@
         }
 
         function getRoot1(){
-            if ($this->getDelta() >= 0){
+            if ($this->getDelta() > 0){
                 return (- $this->b + sqrt($this->getDelta())) / (2*$this->a);
             }
         }
         function getRoot2(){
-            if ($this->getDelta() >= 0){
+            if ($this->getDelta() > 0){
                 return (- $this->b - sqrt($this->getDelta())) / (2*$this->a);
             }
         }
