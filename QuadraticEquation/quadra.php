@@ -20,7 +20,6 @@
         function getC(){
             return $this->c;
         }
-
         function getDelta(){
             return $this->b*$this->b-4*$this->a*$this->c;
         }
@@ -42,14 +41,17 @@
             }
         }
         function checkDelta(){
-            if ($this->getDelta() < 0) return "Phương trình vô nghiệm.";
+            
+             if ($this->getDelta() < 0) return "Phương trình vô nghiệm.";
         }
         function display(){
-            echo "Phương trình bậc hai có delta = ".$this->getDelta()."<br/>";
-            if ($this->getDelta() == 0){
-                echo "Nghiệm kép: ".$this->getRoot();
-            } else if ($this->getDelta() >= 0){
-                echo "2 nghiệm: <br/>Nghiệm 1: ".$this->getRoot1()." và nghiệm 2: ".$this->getRoot2();
-            } else if ($this->getDelta() < 0) echo $this->checkDelta();
+            if ($this->a == NULL) echo "";
+            else if ($this->a == 0) echo 'Số thứ nhất = 0 nên là phương trình bậc nhất';
+            else if ($this->getDelta() == 0)
+                echo "Phương trình bậc hai có delta ".$this->getDelta()."<br/>Nghiệm kép: ".$this->getRoot();
+            else if ($this->getDelta() > 0)
+            echo "Phương trình bậc hai có delta ".$this->getDelta()."<br/>2 nghiệm: <br/>Nghiệm 1: ".$this->getRoot1()." và nghiệm 2: ".$this->getRoot2();
+            else if ($this->getDelta() < 0) echo $this->checkDelta();
+            
         }
     }

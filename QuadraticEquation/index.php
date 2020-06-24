@@ -21,6 +21,7 @@
         $number2 = $_POST['number2'];
         $number3 = $_POST['number3'];
         $pt1 = new Quadra($number1, $number2, $number3);
+        
         $pt1->display();
     }
 ?>
