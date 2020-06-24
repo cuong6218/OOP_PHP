@@ -1,5 +1,5 @@
 <?php
-
+use \Datetime;
     include ('stopwatch.php');
     $rolex = new StopWatch();
     $rolex->start();
@@ -7,13 +7,14 @@
     echo $rolex->getStartTime();
     echo "<br/>";
     $flag = false;
-    for($i = 0; $i < 100000; $i++){
+    for($i = 0; $i < 1000000; $i++){
         $flag = true;
     }
-    // usleep(10000000);
+    // $rolex->timeHasPass();
     $rolex->stop();
     echo 'End Time: ';
     echo $rolex->getEndTime();
+    
     echo "<br/>";
     echo 'Time has pass: ';
     echo $rolex->getElapsedTime();
