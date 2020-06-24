@@ -1,18 +1,13 @@
 <?php
-define ('SLOW', '1', true);
-define ('MEDIUM', '2', true);
-define ('FAST', '3', true);
     class Fan{
-        private $speed;
-        private $on;
-        private $radius;
-        private $color;
-        function __construct(){
-            $this->speed = SLOW;
-            $this->on = false;
-            $this->radius = 5;
-            $this->color = 'blue';
-        }
+        const SLOW = 1;
+        const MEDIUM = 2;
+        const FAST = 3;
+        private $speed = self::SLOW;
+        private $on = false;
+        private $radius = 5;
+        private $color = 'blue';
+        
         function setSpeed($value){
             $this->speed = $value;
         }
